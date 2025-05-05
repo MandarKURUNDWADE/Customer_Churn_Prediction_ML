@@ -79,58 +79,13 @@ The dataset contains 7,043 customer records with 21 features including:
 customer-churn-prediction/
 ├── data/                    # Raw and processed datasets
 ├── notebooks/               # Jupyter notebooks for analysis
-│   ├── EDA.ipynb            # Exploratory Data Analysis
-│   ├── Modeling.ipynb       # Model development
-│   └── Evaluation.ipynb     # Performance metrics
+│   └── customer_churn_prediction_using_ML.ipynb  
 ├── models/                  # Saved models
-│   ├── customer_churn_rf_model.pkl
-│   └── model_columns.pkl
-├── src/                     # Source code
-│   ├── preprocessing.py     # Data cleaning functions
-│   └── predict.py          # Prediction function
-├── reports/                 # Project documentation
-├── README.md                # This file
-└── requirements.txt         # Dependencies
+├── gradio-app/              
+│   └── app.py               
+└── README.md 
 ```
 
-## Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/customer-churn-prediction.git
-cd customer-churn-prediction
-```
-
-2. Create and activate virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-```
-
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-## Usage
-
-**Making Predictions:**
-```python
-from src.predict import predict_churn
-
-# Sample input data (should match model features)
-new_customer = {
-    'tenure': 12,
-    'MonthlyCharges': 70.50,
-    'TotalCharges': 850.00,
-    'Contract_Two year': 1,
-    # ... other features
-}
-
-prediction, probability = predict_churn(new_customer)
-print(f"Churn Prediction: {'Yes' if prediction else 'No'}")
-print(f"Probability: {probability:.2f}")
-```
 
 ## Future Improvements
 
@@ -150,8 +105,3 @@ print(f"Probability: {probability:.2f}")
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Dataset provided by [source if applicable]
-- Inspired by [any references]
